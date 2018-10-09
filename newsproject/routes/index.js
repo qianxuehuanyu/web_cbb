@@ -10,8 +10,9 @@ router.get('/', function (req, res, next) {
         selectCount: 0
     };
     var connquery_count = 0;
-    conn.query("SELECT * FROM class", function (err, result) {
+    conn.query("SELECT * FROM `class`", function (err, result) {
         if (!err) {
+            console.log(result);
             indexcontent.classlist = result;
             indexcontent.selectCount++;
         } else {
