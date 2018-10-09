@@ -8,21 +8,24 @@
   </head>
   <body>
   <div class="body">
-
-  <div class="classList list">
-  </div>
-<div class="studentList list">
-</div>
-  </div>
-      <ul>
+    <div class="classList list">
+     <ul>
         <% for(let i=0;i<Content.classlist.length;i++){ %>
         <li class="theClass">
             <%= Content.classlist[i].classname %>
-            <a class="displayNone"> <%= Content.classlist[i].id %></a>
+            <a class="displayNone"> <%= Content.classlist[i].cid %></a>
         </li>
         <% } %>
       </ul>
+    </div>
+
+
+
+
+    <div class="studentList list">
+    </div>
+  </div>
 
 </div>
-  </body>
+</body>
 </html>

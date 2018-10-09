@@ -174,11 +174,22 @@ textarea {
 }
 
 /*---------------------------------*/
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
 .displayNone {
     display: none !important;
 }
 
 .body {
+    flex: 1;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -192,5 +203,8 @@ textarea {
 }
 
 .classList {
+}
 
+.theClass {
+    cursor: pointer;
 }
