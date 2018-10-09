@@ -1,24 +1,10 @@
 (function () {
-    // var list = $(".style_img3 span");
-    // console.log(list);
-    // var content;
-    //
-    // list.click(function (event) {
-    //     /* Act on the event */
-    //     list.removeClass('now');
-    //     $(this).addClass('now');
-    //
-    //
-    // });
-    //
-    // var list2 = $(".case_site a");
-    // console.log(list2);
-    //
-    // list2.click(function (event) {
-    //     /* Act on the event */
-    //     content = $(this).html();
-    //     $.post("./PtjsLinkToYxal", {displayCity: content});
-    // });
-
-
+    var list = $(".theClass");
+    list.click(function (event) {
+        var content = $(this).find("a.displayNone").first().html();
+        console.log(content);
+        $.post("./theStudentList", {cid: content}, function (result) {
+            console.log(result);
+        });
+    });
 })();
