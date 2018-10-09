@@ -8,4 +8,20 @@
             console.log(result);
         });
     });
+
+    function addNewClass() {
+        $(".flexBox.addClassBox").css('display', 'block')
+    }
+
+    function addClassCheck() {
+        $(".flexBox.addClassBox").css('display', 'none')
+    }
+
+    function addClassCancel() {
+        $(".flexBox.addClassBox").css('display', 'none')
+    }
+
+    window.addNewClass = addNewClass;
+    window.addClassCheck = addClassCheck;
+    window.addClassCancel = addClassCancel;
 })();

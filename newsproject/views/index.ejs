@@ -9,23 +9,33 @@
   <body>
   <div class="body">
     <div class="classList list">
-     <ul>
+     <p>班级/Class</p>
+     <ul id="Ul_class" class="in_list_ul">
         <% for(let i=0;i<Content.classlist.length;i++){ %>
         <li class="theClass">
             <%= Content.classlist[i].classname %>
             <a class="displayNone"> <%= Content.classlist[i].cid %></a>
+            <a class="setting"> <%= Content.classlist[i].cid %></a>
         </li>
         <% } %>
       </ul>
+      <button class="addBtn" onclick="addNewClass()">+添加/Add</button>
+    </div>
+    <div class="flexBox addClassBox">
+        <div class="showBox">
+
+        </div>
     </div>
 
 
 
 
     <div class="studentList list">
+    <p>学生/Student</p>
+    <ul id="Student_class" class="in_list_ul">
+    </ul>
+    <button>+添加/Add</button>
     </div>
   </div>
-
-</div>
-</body>
+  </body>
 </html>
