@@ -14,13 +14,12 @@
     }
 
     function addClassCheck() {
-
         var _val = $("#className").val();
         if (_val && _val.trim().length > 0 && _val.length > 0) {
             $.post("./addClass", {classname: _val}, function (result) {
                 console.log(result);
                 if (result && result.status == 1) {
-
+                    alert('成功/Success');
                 } else {
                     alert('添加失败/Failed')
                 }

@@ -29,7 +29,6 @@ router.get('/', function (req, res, next) {
 
 
 router.post('/addClass', function (req, res, next) {
-    console.log(req.query.projectCount);
     conn.query("INSERT `class` (`cid`,`classname`,`des`,`has`) " +
         "VALUE ('','" + req.body.classname + "','" + 111 + "','" + 1 + "')",
         function (err, result) {
