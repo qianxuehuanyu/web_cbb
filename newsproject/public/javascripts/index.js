@@ -23,9 +23,9 @@
                 } else {
                     alert('添加失败/Failed')
                 }
+                $(".flexBox.addClassBox").css('display', 'none')
             });
         }
-        // $(".flexBox.addClassBox").css('display', 'none')
     }
 
     function addClassCancel() {
