@@ -14,10 +14,23 @@
     }
 
     function addClassCheck() {
-        $(".flexBox.addClassBox").css('display', 'none')
+
+        var _val = $("#className").val();
+        if (_val && _val.trim().length > 0 && _val.length > 0) {
+            $.post("./addClass", {classname: _val}, function (result) {
+                console.log(result);
+                if (result && result.status == 1) {
+
+                } else {
+                    alert('添加失败/Failed')
+                }
+            });
+        }
+        // $(".flexBox.addClassBox").css('display', 'none')
     }
 
     function addClassCancel() {
+        $("#className").val('');
         $(".flexBox.addClassBox").css('display', 'none')
     }
 

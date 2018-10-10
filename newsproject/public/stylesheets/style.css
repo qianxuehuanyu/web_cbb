@@ -210,10 +210,17 @@ ul {
     max-width: 280px;
     padding: 20px 10px;
     background: #ffa9c1;
-    border-radius: 50%;
+    border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.flexBox .showBox input {
+    border: 1px solid #dedede;
+    outline: none;
+    background: #fff;
+    padding: 0 6px;
 }
 
 .list {

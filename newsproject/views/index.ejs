@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= Content.title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
     <script src="/lib/jquery-3.1.1.min.js"></script>
     <script src="/javascripts/index.js"></script>
-  </head>
-  <body>
-  <div class="body">
+</head>
+<body>
+<div class="body">
     <div class="classList list">
-     <p>班级/Class</p>
-     <ul id="Ul_class" class="in_list_ul">
-        <% for(let i=0;i<Content.classlist.length;i++){ %>
-        <li class="theClass">
-            <%= Content.classlist[i].classname %>
-            <a class="displayNone"> <%= Content.classlist[i].cid %></a>
-            <a class="setting"> <%= Content.classlist[i].cid %></a>
-        </li>
-        <% } %>
-      </ul>
-      <button class="addBtn" onclick="addNewClass()">+添加/Add</button>
+        <p>班级/Class</p>
+        <ul id="Ul_class" class="in_list_ul">
+            <% for(let i = 0;i < Content.classlist.length;i++){ %>
+            <li class="theClass">
+                <%= Content.classlist[i].classname %>
+                <a class="displayNone"> <%= Content.classlist[i].cid %></a>
+                <a class="setting"> <%= Content.classlist[i].cid %></a>
+            </li>
+            <% } %>
+        </ul>
+        <button class="addBtn" onclick="addNewClass()">+添加/Add</button>
     </div>
     <div class="flexBox addClassBox">
         <div class="showBox">
-
+            <div class="input">
+                <input id="className" type="text">
+            </div>
+            <div>
+                <button onclick="addClassCheck()">确认/Submit</button>
+                <button onclick="addClassCancel()">取消/Cancel</button>
+            </div>
         </div>
     </div>
 
 
-
-
     <div class="studentList list">
-    <p>学生/Student</p>
-    <ul id="Student_class" class="in_list_ul">
-    </ul>
-    <button>+添加/Add</button>
+        <p>学生/Student</p>
+        <ul id="Student_class" class="in_list_ul">
+        </ul>
+        <button>+添加/Add</button>
     </div>
-  </div>
-  </body>
+</div>
+</body>
 </html>
