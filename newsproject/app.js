@@ -6,8 +6,6 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var ngrok = require("ngrok");
-
 var app = express();
 
 // view engine setup
@@ -39,10 +37,4 @@ app.use(function (err, req, res, next) {
     res.render('error');
 });
 
-ngrok.connect(3000, function (err, url) {
-    if (err) {
-        console.log(err);
-        return;
-    }
-});
 module.exports = app;
