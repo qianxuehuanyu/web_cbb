@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
     var indexcontent = {
         title: "self",
         classlist: {},
-        selectCount = 0
+        selectCount: 0
     };
     var connquery_count = 0;
     conn.query("SELECT * FROM class", function (err, result) {
